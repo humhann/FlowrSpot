@@ -5,6 +5,8 @@ import {
   View,
 } from 'react-native';
 
+import Comment from '../../icons/Comment';
+
 export default class Tab2Screen extends React.Component {
   render() {
     return (
@@ -14,6 +16,10 @@ export default class Tab2Screen extends React.Component {
     );
   }
 }
+
+Tab2Screen.navigationOptions = {
+  tabBarIcon: <Comment />,
+};
 
 const styles = StyleSheet.create({
   container: {

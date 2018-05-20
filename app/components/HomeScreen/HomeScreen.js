@@ -5,6 +5,8 @@ import {
   View,
 } from 'react-native';
 
+import Favorites from '../../icons/Favorites';
+
 export default class HomeScreen extends React.Component {
   render() {
     return (
@@ -14,6 +16,10 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
+
+HomeScreen.navigationOptions = {
+  tabBarIcon: <Favorites />,
+};
 
 const styles = StyleSheet.create({
   container: {

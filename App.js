@@ -22,6 +22,10 @@ const TabNavigator = createBottomTabNavigator({
   Tab2: Tab2Screen,
   Tab3: Tab3Screen,
   Tab4: Tab4Screen,
+}, {
+  tabBarOptions: {
+    showLabel: false,
+  },
 });
 
 const AppNavigator = createStackNavigator({

@@ -5,6 +5,8 @@ import {
   View,
 } from 'react-native';
 
+import SightingList from '../../icons/SightingList';
+
 export default class Tab4Screen extends React.Component {
   render() {
     return (
@@ -14,6 +16,10 @@ export default class Tab4Screen extends React.Component {
     );
   }
 }
+
+Tab4Screen.navigationOptions = {
+  tabBarIcon: <SightingList />,
+};
 
 const styles = StyleSheet.create({
   container: {
