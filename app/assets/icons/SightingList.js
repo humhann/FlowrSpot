@@ -4,6 +4,7 @@ import Svg, {
   Circle,
   Path,
 } from 'react-native-svg';
+import PropTypes from 'prop-types';
 
 const SightingList = ({ focused, tintColor }) => (
   <Svg
@@ -12,9 +13,14 @@ const SightingList = ({ focused, tintColor }) => (
   >
     <G fill="none" fillRule="evenodd" stroke="#EAA79E" transform="translate(1 1)">
       <Circle cx="14.5" cy="14.5" r="14.5" />
-      <Path fill={focused ? tintColor : "none"} d="M15 14.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5M15 5c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7" />
+      <Path fill={focused ? tintColor : 'none'} d="M15 14.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5M15 5c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7" />
     </G>
   </Svg>
 );
+
+SightingList.propTypes = {
+  focused: PropTypes.bool.isRequired,
+  tintColor: PropTypes.string.isRequired,
+};
 
 export default SightingList;
