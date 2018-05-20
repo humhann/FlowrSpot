@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import Sighting from '../../icons/Sighting';
+import Sighting from '../../assets/icons/Sighting';
 
 export default class Tab3Screen extends React.Component {
   render() {

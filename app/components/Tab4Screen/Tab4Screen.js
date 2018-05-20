@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import SightingList from '../../icons/SightingList';
+import SightingList from '../../assets/icons/SightingList';
 
 export default class Tab4Screen extends React.Component {
   render() {

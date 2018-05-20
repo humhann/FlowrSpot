@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import Favorites from '../../icons/Favorites';
+import Favorites from '../../assets/icons/Favorites';
 
 export default class HomeScreen extends React.Component {
   render() {

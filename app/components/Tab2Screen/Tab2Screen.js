@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import Comment from '../../icons/Comment';
+import Comment from '../../assets/icons/Comment';
 
 export default class Tab2Screen extends React.Component {
   render() {
