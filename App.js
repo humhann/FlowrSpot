@@ -10,6 +10,8 @@ import Tab2Screen from './app/components/Tab2Screen/Tab2Screen';
 import Tab3Screen from './app/components/Tab3Screen/Tab3Screen';
 import Tab4Screen from './app/components/Tab4Screen/Tab4Screen';
 
+import HeaderTitle from './app/components/HeaderTitle/HeaderTitle';
+
 export default class App extends React.Component {
   state = {
     fontsLoaded: false,
@@ -60,6 +62,7 @@ const TabNavigator = createBottomTabNavigator({
 });
 
 TabNavigator.navigationOptions = {
+  headerTitle: <HeaderTitle />,
   headerStyle: {
     backgroundColor: '#fff',
     borderBottomWidth: 0,
