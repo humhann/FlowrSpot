@@ -18,7 +18,7 @@ export default class Tab2Screen extends React.Component {
 }
 
 Tab2Screen.navigationOptions = {
-  tabBarIcon: <Comment />,
+  tabBarIcon: props => (<Comment {...props} />),
 };
 
 const styles = StyleSheet.create({

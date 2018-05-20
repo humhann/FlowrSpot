@@ -18,7 +18,7 @@ export default class HomeScreen extends React.Component {
 }
 
 HomeScreen.navigationOptions = {
-  tabBarIcon: <Favorites />,
+  tabBarIcon: props => (<Favorites {...props} />),
 };
 
 const styles = StyleSheet.create({

@@ -18,7 +18,7 @@ export default class Tab4Screen extends React.Component {
 }
 
 Tab4Screen.navigationOptions = {
-  tabBarIcon: <SightingList />,
+  tabBarIcon: props => (<SightingList {...props} />),
 };
 
 const styles = StyleSheet.create({

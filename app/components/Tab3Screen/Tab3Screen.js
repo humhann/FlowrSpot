@@ -18,7 +18,7 @@ export default class Tab3Screen extends React.Component {
 }
 
 Tab3Screen.navigationOptions = {
-  tabBarIcon: <Sighting />,
+  tabBarIcon: props => (<Sighting {...props} />),
 };
 
 const styles = StyleSheet.create({
