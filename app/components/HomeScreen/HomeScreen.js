@@ -8,6 +8,10 @@ import {
 import Favorites from '../../assets/icons/Favorites';
 
 export default class HomeScreen extends React.Component {
+  static navigationOptions = {
+    tabBarIcon: props => (<Favorites {...props} />),
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,10 +20,6 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
-
-HomeScreen.navigationOptions = {
-  tabBarIcon: props => (<Favorites {...props} />),
-};
 
 const styles = StyleSheet.create({
   container: {

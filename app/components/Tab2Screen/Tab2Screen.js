@@ -8,6 +8,10 @@ import {
 import Comment from '../../assets/icons/Comment';
 
 export default class Tab2Screen extends React.Component {
+  static navigationOptions = {
+    tabBarIcon: props => (<Comment {...props} />),
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,10 +20,6 @@ export default class Tab2Screen extends React.Component {
     );
   }
 }
-
-Tab2Screen.navigationOptions = {
-  tabBarIcon: props => (<Comment {...props} />),
-};
 
 const styles = StyleSheet.create({
   container: {

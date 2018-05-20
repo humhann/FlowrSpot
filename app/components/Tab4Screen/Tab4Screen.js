@@ -8,6 +8,10 @@ import {
 import SightingList from '../../assets/icons/SightingList';
 
 export default class Tab4Screen extends React.Component {
+  static navigationOptions = {
+    tabBarIcon: props => (<SightingList {...props} />),
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,10 +20,6 @@ export default class Tab4Screen extends React.Component {
     );
   }
 }
-
-Tab4Screen.navigationOptions = {
-  tabBarIcon: props => (<SightingList {...props} />),
-};
 
 const styles = StyleSheet.create({
   container: {

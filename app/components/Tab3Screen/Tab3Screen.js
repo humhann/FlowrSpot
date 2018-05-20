@@ -8,6 +8,10 @@ import {
 import Sighting from '../../assets/icons/Sighting';
 
 export default class Tab3Screen extends React.Component {
+  static navigationOptions = {
+    tabBarIcon: props => (<Sighting {...props} />),
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,10 +20,6 @@ export default class Tab3Screen extends React.Component {
     );
   }
 }
-
-Tab3Screen.navigationOptions = {
-  tabBarIcon: props => (<Sighting {...props} />),
-};
 
 const styles = StyleSheet.create({
   container: {
