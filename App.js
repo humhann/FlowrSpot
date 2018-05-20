@@ -24,11 +24,25 @@ const TabNavigator = createBottomTabNavigator({
   Tab4: Tab4Screen,
 }, {
   tabBarOptions: {
+    tabStyle: {
+      backgroundColor: '#fff',
+      /* Workaround to hide border */
+      borderTopWidth: 1,
+      borderTopColor: '#fff',
+      marginTop: -1,
+    },
     showLabel: false,
     activeTintColor: '#EAA79E',
     inactiveTintColor: '#EAA79E',
   },
 });
+
+TabNavigator.navigationOptions = {
+  headerStyle: {
+    backgroundColor: '#fff',
+    borderBottomWidth: 0,
+  },
+};
 
 const AppNavigator = createStackNavigator({
   Tabs: TabNavigator,
