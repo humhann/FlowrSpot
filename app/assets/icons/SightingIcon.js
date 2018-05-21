@@ -6,7 +6,7 @@ import Svg, {
 } from 'react-native-svg';
 import PropTypes from 'prop-types';
 
-const Sighting = ({ focused, tintColor }) => (
+const SightingIcon = ({ focused, tintColor }) => (
   <Svg
     width="31"
     height="31"
@@ -22,9 +22,9 @@ const Sighting = ({ focused, tintColor }) => (
   </Svg>
 );
 
-Sighting.propTypes = {
+SightingIcon.propTypes = {
   focused: PropTypes.bool.isRequired,
   tintColor: PropTypes.string.isRequired,
 };
 
-export default Sighting;
+export default SightingIcon;

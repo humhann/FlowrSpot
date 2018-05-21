@@ -5,11 +5,11 @@ import {
   View,
 } from 'react-native';
 
-import Comment from '../../assets/icons/Comment';
+import CommentIcon from '../../assets/icons/CommentIcon';
 
 export default class Tab2Screen extends React.Component {
   static navigationOptions = {
-    tabBarIcon: props => (<Comment {...props} />),
+    tabBarIcon: props => (<CommentIcon {...props} />),
   }
 
   render() {

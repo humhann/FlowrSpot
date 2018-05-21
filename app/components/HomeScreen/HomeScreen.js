@@ -4,12 +4,12 @@ import {
   ScrollView,
 } from 'react-native';
 
-import Favorites from '../../assets/icons/Favorites';
+import FavoritesIcon from '../../assets/icons/FavoritesIcon';
 import HeroSection from '../HeroSection/HeroSection';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    tabBarIcon: props => (<Favorites {...props} />),
+    tabBarIcon: props => (<FavoritesIcon {...props} />),
   }
 
   render() {

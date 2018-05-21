@@ -5,11 +5,11 @@ import {
   View,
 } from 'react-native';
 
-import SightingList from '../../assets/icons/SightingList';
+import SightingListIcon from '../../assets/icons/SightingListIcon';
 
 export default class Tab4Screen extends React.Component {
   static navigationOptions = {
-    tabBarIcon: props => (<SightingList {...props} />),
+    tabBarIcon: props => (<SightingListIcon {...props} />),
   }
 
   render() {

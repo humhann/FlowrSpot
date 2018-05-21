@@ -6,7 +6,7 @@ import Svg, {
 } from 'react-native-svg';
 import PropTypes from 'prop-types';
 
-const Comment = ({ focused, tintColor }) => (
+const CommentIcon = ({ focused, tintColor }) => (
   <Svg
     width="31"
     height="31"
@@ -18,9 +18,9 @@ const Comment = ({ focused, tintColor }) => (
   </Svg>
 );
 
-Comment.propTypes = {
+CommentIcon.propTypes = {
   focused: PropTypes.bool.isRequired,
   tintColor: PropTypes.string.isRequired,
 };
 
-export default Comment;
+export default CommentIcon;

@@ -6,7 +6,7 @@ import Svg, {
 } from 'react-native-svg';
 import PropTypes from 'prop-types';
 
-const Favorites = ({ focused, tintColor }) => (
+const FavoritesIcon = ({ focused, tintColor }) => (
   <Svg
     width="31"
     height="31"
@@ -18,9 +18,9 @@ const Favorites = ({ focused, tintColor }) => (
   </Svg>
 );
 
-Favorites.propTypes = {
+FavoritesIcon.propTypes = {
   focused: PropTypes.bool.isRequired,
   tintColor: PropTypes.string.isRequired,
 };
 
-export default Favorites;
+export default FavoritesIcon;
