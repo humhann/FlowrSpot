@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
-  View,
+  ScrollView,
 } from 'react-native';
 
 import Favorites from '../../assets/icons/Favorites';
+import HeroSection from '../HeroSection/HeroSection';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -14,18 +14,15 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Home</Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <HeroSection />
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
