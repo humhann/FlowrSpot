@@ -10,7 +10,7 @@ export default class FlowerItem extends React.PureComponent {
   render() {
     return (
       <View style={styles.container}>
-        <Text>FlowerItem</Text>
+        <Text>{ this.props.item.name }</Text>
       </View>
     );
   }

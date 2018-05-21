@@ -13,10 +13,10 @@ export default class FlowerList extends React.PureComponent {
       <View
         style={styles.container}
       >
-        { this.props.items.map(item => (
+        { this.props.items.length > 0 && this.props.items.map((item, key) => (
           <FlowerItem
             item={item}
-            key={item.key}
+            key={key}
           />
         )) }
       </View>

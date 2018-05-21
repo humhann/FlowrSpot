@@ -4,24 +4,29 @@ import {
   ScrollView,
 } from 'react-native';
 
+import FlowerService from '../../api/FlowerService';
 import HeroSection from '../HeroSection/HeroSection';
 import FlowerList from '../FlowerList/FlowerList';
 
 import FavoritesIcon from '../../assets/icons/FavoritesIcon';
 
 export default class HomeScreen extends React.Component {
-  state = {
-    items: [
-      { key: '0' },
-      { key: '1' },
-      { key: '2' },
-      { key: '3' },
-      { key: '4' },
-    ],
-  }
-
   static navigationOptions = {
     tabBarIcon: props => (<FavoritesIcon {...props} />),
+  }
+
+  state = {
+    items: [],
+  }
+
+  async componentDidMount() {
+    const flowersIndex = await FlowerService.getFlowersIndex();
+
+    if (flowersIndex && flowersIndex.flowers) {
+      this.setState({
+        items: flowersIndex.flowers,
+      });
+    }
   }
 
   render() {

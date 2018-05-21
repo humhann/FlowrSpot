@@ -4,5 +4,8 @@
     "rules": {
       "react/jsx-filename-extension": 0,
       "no-use-before-define": ["error", { "variables": false }]
+    },
+    "globals": {
+      "fetch": false
     }
 }
