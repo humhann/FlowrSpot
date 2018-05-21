@@ -29,6 +29,16 @@ export default class HomeScreen extends React.Component {
     }
   }
 
+  async search(searchTerm) {
+    const flowersIndex = await FlowerService.searchFlowers(searchTerm);
+
+    if (flowersIndex && flowersIndex.flowers) {
+      this.setState({
+        items: flowersIndex.flowers,
+      });
+    }
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
