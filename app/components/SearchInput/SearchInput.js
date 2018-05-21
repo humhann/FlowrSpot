@@ -1,8 +1,11 @@
 import React from 'react';
 import {
   StyleSheet,
+  View,
   TextInput,
 } from 'react-native';
+
+import SearchIcon from '../../assets/icons/SearchIcon';
 
 export default class SearchInput extends React.PureComponent {
   state = {
@@ -11,28 +14,35 @@ export default class SearchInput extends React.PureComponent {
 
   render() {
     return (
-      <TextInput
-        style={styles.input}
-        onChangeText={searchTerm => this.setState({ searchTerm })}
-        value={this.state.searchTerm}
-        placeholder="Looking for something specific?"
-        placeholderTextColor="#949ea0"
-        returnKeyType="search"
-      />
+      <View style={styles.background}>
+        <TextInput
+          style={styles.input}
+          onChangeText={searchTerm => this.setState({ searchTerm })}
+          value={this.state.searchTerm}
+          placeholder="Looking for something specific?"
+          placeholderTextColor="#949ea0"
+          returnKeyType="search"
+        />
+        <SearchIcon />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  input: {
+  background: {
+    alignItems: 'center',
+    flexDirection: 'row',
     width: '100%',
     maxWidth: 312,
     height: 48,
     backgroundColor: '#fff',
-    paddingLeft: 20,
-    paddingRight: 50,
+    paddingHorizontal: 20,
     paddingVertical: 16,
-    fontFamily: 'ubuntu-light',
     borderRadius: 3,
+  },
+  input: {
+    flex: 1,
+    fontFamily: 'ubuntu-light',
   },
 });
