@@ -13,10 +13,10 @@ export default class FlowerList extends React.PureComponent {
       <View
         style={styles.container}
       >
-        { this.props.items.length > 0 && this.props.items.map((item, key) => (
+        { this.props.items.length > 0 && this.props.items.map((item, index) => (
           <FlowerItem
+            key={item.id}
             item={item}
-            key={key}
             applyRightMargin={index % 2 === 0}
           />
         )) }
