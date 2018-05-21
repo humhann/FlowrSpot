@@ -17,6 +17,7 @@ export default class FlowerList extends React.PureComponent {
           <FlowerItem
             item={item}
             key={key}
+            applyRightMargin={index % 2 === 0}
           />
         )) }
       </View>
@@ -30,5 +31,10 @@ FlowerList.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginHorizontal: 14,
+    marginTop: 12,
   },
 });
