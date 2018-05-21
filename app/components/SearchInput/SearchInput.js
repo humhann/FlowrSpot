@@ -25,7 +25,9 @@ export default class SearchInput extends React.PureComponent {
           placeholderTextColor="#949ea0"
           returnKeyType="search"
         />
-        <SearchIcon />
+        <View style={styles.icon}>
+          <SearchIcon />
+        </View>
       </View>
     );
   }
@@ -43,12 +45,20 @@ const styles = StyleSheet.create({
     maxWidth: 312,
     height: 48,
     backgroundColor: '#fff',
-    paddingHorizontal: 20,
-    paddingVertical: 16,
     borderRadius: 3,
   },
   input: {
     flex: 1,
     fontFamily: 'ubuntu-light',
+    paddingTop: 16,
+    paddingRight: 0,
+    paddingBottom: 14,
+    paddingLeft: 16,
+  },
+  icon: {
+    height: '100%',
+    justifyContent: 'center',
+    paddingLeft: 5,
+    paddingRight: 21,
   },
 });
