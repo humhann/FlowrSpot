@@ -20,6 +20,7 @@ export default class HomeScreen extends React.Component {
   }
 
   async componentDidMount() {
+    this.setLoading(true);
     const flowersIndex = await FlowerService.getFlowersIndex();
 
     if (flowersIndex && flowersIndex.flowers) {
@@ -27,9 +28,18 @@ export default class HomeScreen extends React.Component {
         items: flowersIndex.flowers,
       });
     }
+
+    this.setLoading(false);
+  }
+
+  setLoading(loading) {
+    this.setState({
+      loading,
+    });
   }
 
   async search(searchTerm) {
+    this.setLoading(true);
     const flowersIndex = await FlowerService.searchFlowers(searchTerm);
 
     if (flowersIndex && flowersIndex.flowers) {
@@ -37,6 +47,12 @@ export default class HomeScreen extends React.Component {
         items: flowersIndex.flowers,
       });
     }
+
+    this.setState({
+      loading: false,
+    });
+
+    this.setLoading(false);
   }
 
   render() {
@@ -46,7 +62,8 @@ export default class HomeScreen extends React.Component {
           search={this.search.bind(this)}
         />
         <FlowerList
-          items={ this.state.items }
+          items={this.state.items}
+          loading={this.state.loading}
         />
       </ScrollView>
     );
