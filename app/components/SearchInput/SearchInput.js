@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   TextInput,
+  TouchableHighlight,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -18,6 +19,7 @@ export default class SearchInput extends React.PureComponent {
       <View style={styles.background}>
         <TextInput
           style={styles.input}
+          ref={(input) => { this.textInput = input; }}
           onChangeText={searchTerm => this.setState({ searchTerm })}
           onSubmitEditing={() => this.props.search(this.state.searchTerm)}
           value={this.state.searchTerm}
@@ -25,9 +27,13 @@ export default class SearchInput extends React.PureComponent {
           placeholderTextColor="#949ea0"
           returnKeyType="search"
         />
-        <View style={styles.icon}>
+        <TouchableHighlight
+          style={styles.icon}
+          underlayColor="transparent"
+          onPress={() => this.textInput.focus()}
+        >
           <SearchIcon />
-        </View>
+        </TouchableHighlight>
       </View>
     );
   }
