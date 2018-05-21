@@ -8,6 +8,8 @@ import {
   PixelRatio,
 } from 'react-native';
 
+import SearchInput from '../SearchInput/SearchInput';
+
 import image from '../../assets/images/pl_hero.jpg';
 
 const imageInfo = Image.resolveAssetSource(image);
@@ -25,6 +27,7 @@ const HeroSection = () => (
     <Text style={styles.subtitle}>
       Explore between more than 8.427 sightings
     </Text>
+    <SearchInput />
   </ImageBackground>
 );
 
