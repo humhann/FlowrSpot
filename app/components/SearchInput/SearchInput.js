@@ -4,6 +4,7 @@ import {
   View,
   TextInput,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import SearchIcon from '../../assets/icons/SearchIcon';
 
@@ -18,6 +19,7 @@ export default class SearchInput extends React.PureComponent {
         <TextInput
           style={styles.input}
           onChangeText={searchTerm => this.setState({ searchTerm })}
+          onSubmitEditing={() => this.props.search(this.state.searchTerm)}
           value={this.state.searchTerm}
           placeholder="Looking for something specific?"
           placeholderTextColor="#949ea0"
@@ -28,6 +30,10 @@ export default class SearchInput extends React.PureComponent {
     );
   }
 }
+
+SearchInput.propTypes = {
+  search: PropTypes.func.isRequired,
+};
 
 const styles = StyleSheet.create({
   background: {

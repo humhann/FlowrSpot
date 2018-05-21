@@ -7,6 +7,7 @@ import {
   Dimensions,
   PixelRatio,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import SearchInput from '../SearchInput/SearchInput';
 
@@ -14,7 +15,7 @@ import image from '../../assets/images/pl_hero.jpg';
 
 const imageInfo = Image.resolveAssetSource(image);
 
-const HeroSection = () => (
+const HeroSection = ({ search }) => (
   <ImageBackground
     style={styles.background}
     resizeMode="contain"
@@ -27,9 +28,15 @@ const HeroSection = () => (
     <Text style={styles.subtitle}>
       Explore between more than 8.427 sightings
     </Text>
-    <SearchInput />
+    <SearchInput
+      search={search}
+    />
   </ImageBackground>
 );
+
+HeroSection.propTypes = {
+  search: PropTypes.func.isRequired,
+};
 
 const styles = StyleSheet.create({
   background: {

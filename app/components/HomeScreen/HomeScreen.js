@@ -42,7 +42,9 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <HeroSection />
+        <HeroSection
+          search={this.search.bind(this)}
+        />
         <FlowerList
           items={ this.state.items }
         />
