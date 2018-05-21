@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#e09186',
     fontFamily: 'ubuntu-bold',
-    fontSize: PixelRatio.getPixelSizeForLayoutSize(10),
+    fontSize: PixelRatio.getFontScale() * 22,
   },
 });
 
